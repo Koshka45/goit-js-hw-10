@@ -26,10 +26,10 @@ fetchBreeds()
       select: selector,
       data: arrBreedsId,
     });
+
+    selector.addEventListener('change', onSelectBreed);
   })
   .catch(onFetchError);
-
-selector.addEventListener('change', onSelectBreed);
 
 function onSelectBreed(event) {
   loader.classList.replace('is-hidden', 'loader');
